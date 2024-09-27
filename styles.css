@@ -1,0 +1,46 @@
+header{
+    background-color: rgb(111, 111, 14);
+    color: black;
+}
+footer {
+    background-color: brown;
+}
+.box
+{
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start; 
+    justify-content: space-between;
+    
+
+}
+.vasak{
+    background-color: aqua;
+    width: 20%;
+}
+.keskmine{
+    background-color: gold;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+.post{
+    border: 3px solid black;
+    padding: 2%;
+    background-color: white;
+    margin-bottom: 2%;
+}
+.post img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.kuupäev{
+    text-align:right;
+}
+.parem{
+    background-color: red;
+    width: 20%;
+}
