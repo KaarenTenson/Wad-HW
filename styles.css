@@ -4,6 +4,8 @@ header{
 }
 footer {
     background-color: brown;
+    font-size: large;
+    padding: 5px;
 }
 .box
 {
@@ -25,22 +27,33 @@ footer {
     display: flex;
     flex-direction: column;
 }
+.parem{
+    background-color: red;
+    width: 20%;
+}
 .post{
     border: 3px solid black;
     padding: 2%;
     background-color: white;
     margin-bottom: 2%;
+
 }
-.post img{
+.kuupäev{
+    text-align:right;
+}
+
+.post > img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
-.kuupäev{
-    text-align:right;
+.reaktsioon{
+    display: flex;
+    flex-direction: row;
+   
 }
-.parem{
-    background-color: red;
-    width: 20%;
+.reaktsioon > img{
+    width: 50px;
 }
+
