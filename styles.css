@@ -1,12 +1,31 @@
 header{
-    background-color: rgb(111, 111, 14);
+    background-color: rgb(171, 171, 159);
     color: black;
+    text-align: center;
+    font-size: larger;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: space-between; /* Horizontally centers the content */
+    height: 100px;
+    padding: 0% 3% 0% 3%;
+}
+header img {
+    align-content: end;
+}
+header a {
+    color: black;
+    font-size: large;
+}
+header a:hover {
+    background-color: rgb(154, 149, 149);
+    text-decoration:overline ;
 }
 footer {
-    background-color: brown;
+    background-color: rgb(141, 136, 136);
     font-size: large;
     padding: 5px;
 }
+
 .box
 {
     margin: 1%;
@@ -18,17 +37,19 @@ footer {
 
 }
 .vasak{
-    background-color: aqua;
+    text-align: center;
+    background-color: rgb(64, 92, 92);
     width: 20%;
 }
 .keskmine{
-    background-color: gold;
+    background-color: rgb(80, 78, 67);
     width: 55%;
     display: flex;
     flex-direction: column;
 }
 .parem{
-    background-color: red;
+    text-align: center;
+    background-color: rgb(64, 92, 92);
     width: 20%;
 }
 .post{
@@ -46,9 +67,15 @@ footer {
 .post:hover {
     margin:  1%;
   }
-.kuupäev{
-    text-align:right;
+.postheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+.postheader img {
+    width: 7%;
+}
+
 
 .post > img{
     display: block;
@@ -62,7 +89,7 @@ footer {
    
 }
 .reaktsioon > img{
-    width: 50px;
+    width: 5%;
 }
 @media (max-width: 800px) {
     .box{
