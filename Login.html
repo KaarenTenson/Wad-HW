@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +7,29 @@
     <link rel="icon" href="icons/favicon.ico">
     <title>site</title>
 </head>
+<body>
     <header class="header">
         <p>Home</p>
         <img src="icons/favicon.ico" width="50" height="50" alt="profile_pic">
     </header>
 
-    <section class="form">
-        <h4>Welcome to PostIt</h4>
+    <div class="form">
+        <strong>Welcome to PostIt</strong>
         <div>
             <p>Create an account</p>
         </div>
         <p>or</p>
         <p>Please log in</p>
-        <form>
+        <form action="index.html" method="POST">
             <input id="email" type="email" required placeholder="Email">
-            <br />
+            <br>
             <input id="password" type="password" required placeholder="Password">
-            <br />
+            <br>
             <input id="submit" type="submit" value="Log in">
-            <br />
         </form>
         <div>
             <p>Forget password</p>
         </div>
-    </section>
-
-<body>
-
+    </div>
 </body>
 </html>
