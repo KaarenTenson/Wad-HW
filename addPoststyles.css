@@ -51,7 +51,6 @@ div label {
     display: block;
     margin-bottom: 5px;
 }
-
 button:hover {
     background-color: green;
     color: white;
