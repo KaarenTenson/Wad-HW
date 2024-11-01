@@ -40,17 +40,26 @@ footer {
     text-align: center;
     background-color: rgb(64, 92, 92);
     width: 20%;
+    border: 3px solid black;
+    background-size: cover;
+    background-position: center;
 }
 .keskmine{
     background-color: rgb(80, 78, 67);
     width: 55%;
     display: flex;
     flex-direction: column;
+    border: 3px solid black;
+    background-size: cover;
+    background-position: center;
 }
 .parem{
     text-align: center;
     background-color: rgb(64, 92, 92);
     width: 20%;
+    border: 3px solid black;
+    background-size: cover;
+    background-position: center;
 }
 .post{
     border: 3px solid black;
@@ -74,7 +83,7 @@ footer {
 }
 .postheader img {
     display: block;
-    width: 7%;
+    width: 40px;
     height: 100%;
 }
 
@@ -85,13 +94,43 @@ footer {
     margin-right: auto;
     width: 50%;
 }
+
 .reaktsioon{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
    
 }
-.reaktsioon > img{
-    width: 5%;
+/*like count text */
+.reaktsioonLikeText{
+    margin: 10px;
+    font-size: x-large;
+}
+/*like button */
+
+.like_button {
+    background-image: url("icons/like.png");
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
+
+}
+
+.like_button_clicked {
+    background-image: url("icons/like_filled.png"); /* Change when checked */
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    border: none;
 }
 @media (max-width: 800px) {
     .box{
