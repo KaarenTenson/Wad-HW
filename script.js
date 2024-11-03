@@ -78,6 +78,7 @@ function AddPost(tekst, likes=0, profpic=null, img=null, dateString= null){
     posts.appendChild(post);
 
 }
+
 function AddLikeButtonEvent(){
     const buttons = document.getElementsByClassName("like_button");
     Array.from(buttons).forEach(element => {
@@ -103,5 +104,40 @@ AddLikeButtonEvent();
 SetProfileInfo("Kaaren","ka@gmail.com", "5544353")
 //RemovePost(0)
 
+// Function to fetch JSON objects from npoint URI.
+/*async function fetchposts() {
+    const endpoint = 'https://api.npoint.io/6928af23f0628a237081'
+    try {
+        const response = await fetch(endpoint);
+        if (!response.ok) {
+            throw new Error('HTTP error.')
+        }
+        const posts = await response.json();
+        posts.forEach(post => {
+            AddPost(post.caption, post.likes.count, post.profile_picture, post.image, post.date_posted);
+        });
+    } catch (error) {
+        console.error('Error fetching');
+    }
+}*/
 
-AddPost("Ts", null, null, null, "01.11.2024");
+async function fetchposts() {
+    const endpoint = './res/json/posts.json';
+    try {
+        const response = await fetch(endpoint);
+        if (!response.ok) {
+            throw new Error('HTTP error.')
+        }
+        const posts = await response.json();
+        posts.forEach(post => {
+            AddPost(post.caption, post.likes.count, post.profile_picture, post.image, post.date_posted);
+        });
+    } catch (error) {
+        console.error('Error fetching');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchposts)
+
+
+//AddPost("Ts", null, null, null, "01.11.2024");

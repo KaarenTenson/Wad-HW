@@ -1,0 +1,103 @@
+[
+    {
+        "author_name": "Hank Kim",
+        "profile_picture": "icons/me.png",
+        "date_posted": "19.12.2003",
+        "image": "icons/download.png",
+        "caption": "how do you like my art?",
+        "likes": {
+            "count": 5,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "John Doe",
+        "profile_picture": "icons/me.png",
+        "date_posted": "19.12.2003",
+        "caption": "not bad",
+        "likes": {
+            "count": 1,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Roger Parks",
+        "profile_picture": "icons/me.png",
+        "date_posted": "19.12.2003",
+        "caption": "looks good:)",
+        "likes": {
+            "count": 2,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Sarah Mitchell",
+        "profile_picture": "icons/me.png",
+        "date_posted": "19.12.2003",
+        "caption": "i like it",
+        "likes": {
+            "count": 1,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Ethan Parker",
+        "profile_picture": "icons/me.png",
+        "date_posted": "20.12.2003",
+        "caption": "i dont know man",
+        "likes": {
+            "count": 1,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Mia Thompson",
+        "profile_picture": "icons/me.png",
+        "date_posted": "20.12.2003",
+        "caption": "could be worse",
+        "likes": {
+            "count": 3,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Lucas Johnson",
+        "profile_picture": "icons/me.png",
+        "date_posted": "20.12.2003",
+        "caption": "pretty nifty ngl",
+        "likes": {
+            "count": 7,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Ava Davis",
+        "profile_picture": "icons/me.png",
+        "date_posted": "20.12.2003",
+        "caption": "awesomesauce",
+        "likes": {
+            "count": 2,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Noah Wilson",
+        "profile_picture": "icons/me.png",
+        "date_posted": "20.12.2003",
+        "caption": "yeah sure",
+        "likes": {
+            "count": 1,
+            "like_icon": "icons/like.png"
+        }
+    },
+    {
+        "author_name": "Isabella Garcia",
+        "profile_picture": "icons/me.png",
+        "date_posted": "20.12.2003",
+        "caption": "pretty good",
+        "likes": {
+            "count": 3,
+            "like_icon": "icons/like.png"
+        }
+    }
+]
