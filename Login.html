@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles2.css">
     <link rel="icon" href="icons/favicon.ico">
-    <title>site</title>
+    <title>Log in</title>
 </head>
 <body>
     <header class="header">
         <p>Home</p>
-        <img src="icons/favicon.ico" width="50" height="50" alt="profile_pic">
+        <div><button id="Profile_info" type="button"></button></div>
     </header>
+    <div id="profilePanel" class="profile-panel">
+        <h3>Guest</h3>
+        <p>Email: guest@example.com</p>
+        <a href="Login.html" ><strong>Logout</strong></a>
+    </div>
 
     <div class="form">
         <strong>Welcome to PostIt</strong>
@@ -20,7 +25,7 @@
         </div>
         <p>or</p>
         <p>Please log in</p>
-        <form action="index.html" method="GET">
+        <form id="loginForm" action="index.html" method="GET">
             <input id="email" type="email" required placeholder="Email">
             <br>
             <input id="password" type="password" required placeholder="Password">
@@ -31,5 +36,6 @@
             <p>Forget password</p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

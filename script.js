@@ -7,12 +7,52 @@ document.getElementById("Profile_info").addEventListener("click", function() {
         panel.style.display = "none"; // Hide the panel
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (document.getElementById("loginForm")) {
+        // Handle login form submission
+        const loginForm = document.getElementById("loginForm");
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const userName = email.split("@")[0];
+
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userName", userName);
+
+            window.location.href = "index.html";
+        });
+    }
+
+    const email = localStorage.getItem("userEmail") || "guest@example.com";
+    const username = localStorage.getItem("userName") || "Guest";
+    if (document.getElementById("profilePanel")) {
+        SetProfileInfo(username, email);
+    }
+    
+    const logoutButton = document.querySelector("#profilePanel a");
+    if (logoutButton) {
+        logoutButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            localStorage.removeItem("userEmail");
+            localStorage.removeItem("userName");
+
+            SetProfileInfo("Guest", "guest@example.com");
+
+            window.location.href = "Login.html";
+        });
+    }
+});
+
 function SetProfileInfo(name, mail){
     const panel = document.getElementById("profilePanel");
     let panelChildren= panel.children
     panelChildren[0].innerText=name; //
     panelChildren[1].innerText="Email: " + mail; // //
 }
+
 function RemovePost(indeks){
     const posts = document.getElementsByClassName("keskmine")[0];
     if(indeks < 0 || indeks >= posts.children.length){
@@ -22,6 +62,7 @@ function RemovePost(indeks){
     const post = posts.children[indeks];  // Select the post by index
     posts.removeChild(post);  // Remove the post from its parent
 }
+
 function AddPost(tekst, likes=0, profpic=null, img=null, dateString= null){
     if(profpic==null){
         profpic="icons/me.png";
@@ -86,6 +127,7 @@ function AddLikeButtonEvent(){
     });
 
 }
+
 function LikeButtonEventListener(btn){
     btn.addEventListener("click", function(){
         if(this.className === "like_button"){
@@ -100,8 +142,8 @@ function LikeButtonEventListener(btn){
         } 
     
 })}
-AddLikeButtonEvent();
-SetProfileInfo("Kaaren","ka@gmail.com", "5544353")
+
+//SetProfileInfo("Kaaren","ka@gmail.com", "5544353")
 //RemovePost(0)
 
 // Function to fetch JSON objects from npoint URI.
@@ -138,6 +180,5 @@ async function fetchposts() {
 }
 
 document.addEventListener('DOMContentLoaded', fetchposts)
-
 
 //AddPost("Ts", null, null, null, "01.11.2024");

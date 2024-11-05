@@ -22,7 +22,7 @@
     },
     {
         "author_name": "Roger Parks",
-        "profile_picture": "icons/me.png",
+        "profile_picture": "icons/favicon.ico",
         "date_posted": "19.12.2003",
         "caption": "looks good:)",
         "likes": {
@@ -42,7 +42,7 @@
     },
     {
         "author_name": "Ethan Parker",
-        "profile_picture": "icons/me.png",
+        "profile_picture": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
         "date_posted": "20.12.2003",
         "caption": "i dont know man",
         "likes": {
@@ -62,7 +62,7 @@
     },
     {
         "author_name": "Lucas Johnson",
-        "profile_picture": "icons/me.png",
+        "profile_picture": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
         "date_posted": "20.12.2003",
         "caption": "pretty nifty ngl",
         "likes": {
@@ -82,7 +82,7 @@
     },
     {
         "author_name": "Noah Wilson",
-        "profile_picture": "icons/me.png",
+        "profile_picture": "https://cdn.vectorstock.com/i/1000v/20/74/woman-avatar-profile-vector-21372074.jpg",
         "date_posted": "20.12.2003",
         "caption": "yeah sure",
         "likes": {

@@ -5,6 +5,7 @@
 
 header {
     background-color: rgb(171, 171, 159);
+    border-radius: 10px;
     color: black;
     text-align: center;
     font-size: larger;

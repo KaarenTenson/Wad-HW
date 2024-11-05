@@ -4,12 +4,21 @@
   }
 
 .header {
-    background-color: gray;
+    background-color: rgb(171, 171, 159);
+    color: black;
+    font-size: larger;
+    font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     border-radius: 10px;
-    padding: 10px;
+    height: 100px;
+    padding: 0% 3% 0% 3%;
+}
+
+header img {
+    align-content: end;
 }
 
 .form {
@@ -53,4 +62,56 @@ div + p {
 
 .form p ~ p {
     color: yellow;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form {
+        flex-direction: column;
+        align-items: center;
+        margin: 0%;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+#Profile_info{ 
+    width: 50px;
+    height: 50px;
+    background-image: url("icons/me.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.profile-panel {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 110px; /* Below the profile image */
+    right: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 1000;
+}
+.profile-panel h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.profile-panel p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.profile-panel a {
+    margin: 5px 0;
+    font-size: 14px;
+    color: black;
 }
