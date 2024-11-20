@@ -8,9 +8,9 @@ export default createStore({
     PostList:[  {
       "id":0,
       "author_name": "Hank Kim",
-      "profile_picture": "../assets/me.png",
+      "profile_picture": "me.png",
       "date_posted": "19.12.2003",
-      "image": "../assets/download.png",
+      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "caption": "how do you like my art?",
       "likes": {
           "count": 5,
@@ -20,7 +20,7 @@ export default createStore({
   {
       "id":1,
       "author_name": "John Doe",
-      "profile_picture": "../assets/me.png",
+      "profile_picture": "me.png",
       "date_posted": "19.12.2003",
       "caption": "not bad",
       "likes": {
@@ -31,7 +31,7 @@ export default createStore({
   {
       "id":2,
       "author_name": "Roger Parks",
-      "profile_picture": "../assets/favicon.ico",
+      "profile_picture": "me.png",
       "date_posted": "19.12.2003",
       "caption": "looks good:)",
       "likes": {
@@ -42,7 +42,7 @@ export default createStore({
   {
       "id":3,
       "author_name": "Sarah Mitchell",
-      "profile_picture": "../assets/me.png",
+      "profile_picture": "me.png",
       "date_posted": "19.12.2003",
       "caption": "i like it",
       "likes": {
@@ -64,7 +64,7 @@ export default createStore({
   {
       "id":5,
       "author_name": "Mia Thompson",
-      "profile_picture": "../assets/me.png",
+      "profile_picture": "me.png",
       "date_posted": "20.12.2003",
       "caption": "could be worse",
       "likes": {
@@ -86,7 +86,7 @@ export default createStore({
   {
       "id":7,
       "author_name": "Ava Davis",
-      "profile_picture": "../assets/me.png",
+      "profile_picture": "me.png",
       "date_posted": "20.12.2003",
       "caption": "awesomesauce",
       "likes": {
@@ -108,7 +108,7 @@ export default createStore({
   {
       "id":9,
       "author_name": "Isabella Garcia",
-      "profile_picture": "../assets/me.png",
+      "profile_picture": "me.png",
       "date_posted": "20.12.2003",
       "caption": "pretty good",
       "likes": {

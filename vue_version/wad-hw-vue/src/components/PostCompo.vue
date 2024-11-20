@@ -1,11 +1,12 @@
 <template>
     <section class="post" v-for="post in PostList" :key="post.id">
       <div class="postheader">
-        <img :src="post.profile_picture" alt="profile">
+        <img :src="resolvePicture(post.profile_picture)" alt="profile">
         <p>{{ post.date_posted }}</p>
       </div>
+      <img v-if="post.image" :src="resolvePicture(post.image)" alt="post image">
       <p>{{ post.caption }}</p>
-      <img v-if="post.image" :src="post.image" alt="post image">
+     
       <section class="reaktsioon">
         <button  @click="Like(post.id)" :class="post.likes.IsLiked ? 'like_button_clicked' : 'like_button'" ></button>
         <p class="reaktsioonLikeText">{{ post.likes.count }}</p>
@@ -29,6 +30,14 @@ methods: {
     Like(id) {
   this.$store.dispatch("LikeAct",id)
 },
+resolvePicture(Picture) {
+  if(Picture.startsWith("http")){
+       return Picture 
+      }
+      
+    return require(`@/assets/${Picture}`); // For static paths
+  
+  },
 },
 }
 </script>
