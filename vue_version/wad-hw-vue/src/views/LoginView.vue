@@ -5,10 +5,48 @@ export default {
     return {
       email: "",
       password: "",
+      validationErrors: [],
     };
   },
   methods: {
+    validatePassword() {
+      this.validationErrors = [];
+      const password = this.password;
+
+      if (password.length < 8 || password.length >= 15) {
+        this.validationErrors.push("Password must be at least 8 characters and less than 15 characters long.");
+      }
+      if (!/^[A-Z]/.test(password)) {
+        this.validationErrors.push("Password must start with an uppercase alphabet.");
+      }
+      if (!/[A-Z]/.test(password)) {
+        this.validationErrors.push("Password must include at least one uppercase alphabet character.");
+      }
+      if (!/[a-z].*[a-z]/.test(password)) {
+        this.validationErrors.push("Password must include at least two lowercase alphabet characters.");
+      }
+      if (!/\d/.test(password)) {
+        this.validationErrors.push("Password must include at least one numeric value.");
+      }
+      if (!/_/.test(password)) {
+        this.validationErrors.push('Password must include the character "_".');
+      }
+    },
+    
     submitLogin() {
+      this.validatePassword();
+
+      if (this.validationErrors.length > 0) {
+        return;
+      }
+
+      const username = this.email.split("@")[0];
+
+      this.$store.dispatch("setProfile", {
+        name: username,
+        mail: this.email,
+      });
+
       console.log(`Logging in with email: ${this.email}, password: ${this.password}`);
       this.$router.push("/about");
     },
@@ -26,24 +64,18 @@ export default {
       <p>or</p>
       <p>Please log in</p>
       <form @submit.prevent="submitLogin">
-        <input
-          type="email"
-          v-model="email"
-          required
-          placeholder="Email"
-        />
+        <input type="email" v-model="email" required placeholder="Email" />
         <br />
-        <input
-          type="password"
-          v-model="password"
-          required
-          placeholder="Password"
-        />
+        <input type="password" v-model="password" required placeholder="Password" />
         <br />
-        <input type="submit" value="Signup" />
+        <input type="submit" id="submit" value="Signup" />
       </form>
-      <div>
-        <p>Forgot password</p>
+
+      <div v-if="validationErrors.length > 0" class="validation-errors">
+        <p>Password is not valid:</p>
+        <ul>
+          <li v-for="(error, index) in validationErrors" :key="index">{{ error }}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -62,6 +94,7 @@ export default {
   margin-top: 20px;
   margin-left: 20%;
   margin-right: 20%;
+  margin-bottom: 20px;
   padding-top: 10px;
 }
 
@@ -109,35 +142,6 @@ div + p {
   button {
     width: 100%;
   }
-}
-
-.profile-panel {
-  display: none; /* Hidden by default */
-  position: absolute;
-  top: 110px; /* Below the profile image */
-  right: 10px;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  z-index: 1000;
-}
-
-.profile-panel h3 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.profile-panel p {
-  margin: 5px 0;
-  font-size: 14px;
-}
-
-.profile-panel a {
-  margin: 5px 0;
-  font-size: 14px;
-  color: black;
 }
 
 </style>

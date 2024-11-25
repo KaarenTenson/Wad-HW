@@ -2,6 +2,10 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
+    profile: {
+      name: "Guest",
+      mail: "guest@example.com",
+    },
     isLoggedIn:false,
     mail:"",
     name:"",
@@ -120,14 +124,18 @@ export default createStore({
     ]
   },
   getters: {
-    name: state => {
-      return state.isLoggedIn ? state.name :"quest";
+    name(state) {
+      return state.profile.name;
     },
-    mail: state => {
-      return state.isLoggedIn ? state.mail :"quest";
+    mail(state) {
+      return state.profile.mail;
     },
   },
   mutations: {
+    updateProfile(state, { name, mail }) {
+      state.profile.name = name;
+      state.profile.mail = mail;
+    },
     Like(state, postId){
       let post=state.PostList.find(post1 => post1.id === postId);
       if(!post){
@@ -152,6 +160,9 @@ export default createStore({
     },
   },
   actions: {
+    setProfile({ commit }, profileData) {
+      commit("updateProfile", profileData);
+    },
     LikeAct({ commit },  postId ) {
       commit('Like', postId );
     },

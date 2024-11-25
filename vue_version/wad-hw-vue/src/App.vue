@@ -52,9 +52,10 @@ const toggleProfile = () => {
     border-radius: 50%;
 }
 footer {
-    background-color: rgb(141, 136, 136);
+    background-color: rgb(171, 171, 159);
     font-size: large;
     padding: 5px;
+    border-radius: 10px;
 }
 
 header{
