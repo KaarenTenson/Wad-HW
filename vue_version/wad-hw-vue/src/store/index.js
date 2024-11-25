@@ -147,6 +147,9 @@ export default createStore({
         post.likes.IsLiked=false;});
 
     },
+    ADD_POST(state, newPost) {
+      state.PostList.push(newPost);
+    },
   },
   actions: {
     LikeAct({ commit },  postId ) {
@@ -155,6 +158,21 @@ export default createStore({
     resetLikesAct({commit}){
       
       commit("RESET_LIKES");
+    },
+    addPostAct({ commit, state }, {postBody, image }) {
+      const newPost = {
+        id: state.PostList.length,
+        author_name: state.isLoggedIn ? state.name : "Guest",
+        profile_picture : "me.png",
+        date_posted: new Date().toLocaleDateString(),
+        caption: postBody,
+        image: image || "",
+        likes: {
+          count: 0,
+          IsLiked: false,
+        },
+      };
+      commit("ADD_POST", newPost);
     }
   },
   modules: {
