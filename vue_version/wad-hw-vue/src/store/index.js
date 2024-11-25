@@ -166,7 +166,7 @@ export default createStore({
         profile_picture : "me.png",
         date_posted: new Date().toLocaleDateString(),
         caption: postBody,
-        image: image || "",
+        image: image || null,
         likes: {
           count: 0,
           IsLiked: false,

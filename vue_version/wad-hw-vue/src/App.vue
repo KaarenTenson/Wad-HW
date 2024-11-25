@@ -16,7 +16,6 @@ const toggleProfile = () => {
   <header>
   <div>
   <strong><router-link to="/about"> Home </router-link></strong>
-  <a href="addPost.html" ><strong>|addpost </strong></a>
   <strong><router-link to="/new-post">| New Post </router-link></strong>
   </div>
   <div>

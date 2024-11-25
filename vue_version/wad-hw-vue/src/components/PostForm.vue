@@ -26,7 +26,15 @@ export default {
   methods: {
     handleFileChange(event) {
         const file = event.target.files[0];
-      this.image = file ? URL.createObjectURL(file) : null;
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                this.image = reader.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            this.image = null;
+            }
     },
     submitPost() {
       if (!this.postBody) {
@@ -35,7 +43,7 @@ export default {
       }
       this.$store.dispatch("addPostAct", {
         postBody: this.postBody,
-        image: this.image,
+        image: null, // Currently null, will add image functionality in future
       });
       this.postBody = "";
       this.image = null;
