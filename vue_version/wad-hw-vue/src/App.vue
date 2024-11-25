@@ -26,10 +26,13 @@ const toggleProfile = () => {
   <ProfileCompo v-if="showProfile" />
   <router-view/>
   <footer>
-        <br>
-        
-        <br>
-    </footer>
+    <p>&copy; 2024 WAD Group Z. All rights reserved.</p>
+    <nav>
+      <a href="/privacy-policy">Privacy Policy</a> | 
+      <a href="/terms-of-service">Terms of Service</a> | 
+      <a href="/contact">Contact Us</a>
+    </nav>
+  </footer>
   
 </template>
 
